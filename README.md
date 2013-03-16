@@ -1,2 +1,2 @@
-# Building a first app with Rails
+### Building a First App with Rails
 
