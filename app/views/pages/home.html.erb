@@ -1,15 +1,24 @@
 	<div class="container">
-		<div class="span5 offset3">
-			<div class="hero-unit frosty">
-				<h2>Improve your Surfing</h2>
-					<p>
-						Track Each Wave. Surf Better!
-					</p>
-
-
-					<p>
-						<%= link_to "Sign up Now!", "#", class: "btn btn-success" %>
-					</p>
+		<% if user_signed_in? %>
+			<div class="span5 offset3">
+				<div class="hero-unit frosty">
+					<h2>Welcome back!</h2>
+					<h3>Let's get you shredding</h>
+				</div>
 			</div>
-		</div>
+		<% else %>
+			<div class="span5 offset3">
+				<div class="hero-unit frosty">
+					<h2>Improve your Surfing</h2>
+						<p>
+							Track Each Wave. Surf Better!
+						</p>
+
+
+						<p>
+							<%= link_to "Sign up Now!", new_user_registration_path, class: "btn btn-success" %>
+						</p>
+				</div>
+			</div>
+		<% end %>
 	</div>
