@@ -19,3 +19,6 @@ doc/
 .project
 .DS_Store
 .idea
+
+#ignore the Paperclib uloading files
+/public/system
