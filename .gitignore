@@ -22,3 +22,6 @@ doc/
 
 #ignore the Paperclib uloading files
 /public/system
+
+# Ignore sample images
+/sampleimages
