@@ -1,6 +1,6 @@
 <div class="box">
 	<p>
-		<%= image_tag pin.image(:medium) %>
+		<%= link_to image_tag(pin.image(:medium)), pin_path(pin) %>
 		<%= pin.description %>
 	</p>
 	
