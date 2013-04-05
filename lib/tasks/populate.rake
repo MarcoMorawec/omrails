@@ -16,7 +16,7 @@ namespace :db do
 			puts "[DEBUG] uploading images for user #{user.id} of #{User.last.id}"
 			10.times do |n|
 				image = File.open(Dir.glob(File.join(Rails.root, 'sampleimages',  '*')).sample)
-				description = %w(awesome fantastic perfect epic).sample
+				description = %w(awesome fantastic perfect sweet).sample
 				user.pins.create!(image: image, description: description)
 			end
 		end
