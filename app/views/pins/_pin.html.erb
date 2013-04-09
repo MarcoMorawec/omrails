@@ -8,6 +8,10 @@
 		</div>
 	</p>
 	
+	<p>
+		Posted by <%= pin.user.name %>
+	</p>
+
 	<%= link_to 'Show', pin %>
 
 	<% if current_user == pin.user %>
