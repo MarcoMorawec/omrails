@@ -9,7 +9,7 @@
 	</p>
 	
 	<p>
-		Posted by <%= pin.user.name %>
+		Posted by <%= link_to pin.user.name, pin.user %>
 	</p>
 
 	<%= link_to 'Show', pin %>

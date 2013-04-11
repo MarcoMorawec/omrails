@@ -1,0 +1,10 @@
+<h1>Hey <%= @user.name %>! Here's your surf action</h1>
+
+<div id="pins" >
+  <%= render @pins %>
+</div>
+  <!-- show the pagination -->
+  <div class="">
+  <%= will_paginate @pins %>
+</div>
+
