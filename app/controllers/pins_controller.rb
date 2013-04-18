@@ -9,6 +9,7 @@ before_filter :authenticate_user!, except: [:index]
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @pins }
+      format.js
     end
   end
 
