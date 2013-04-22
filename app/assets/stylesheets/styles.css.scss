@@ -6,6 +6,7 @@ $navbarBackground: rgba(255,255,255,.4);
 @import 'bootstrap';
 
 body {
+	font-family: Helvetica Neue Light, Helvetica Neue, Helvetica, san-serif;
 	padding-top: 60px;
 	background: url('homebackground.jpg') no-repeat center center fixed; 
 	-webkit-background-size: cover;
@@ -33,6 +34,7 @@ body {
     padding: 1%;
     color: white;
     text-align: center;
+    width: 100%;
 }	
 
 @import 'bootstrap-responsive';
@@ -45,6 +47,44 @@ body {
 		color: gray;
 	}
 }
+
+/* Custom FONTS live here */
+
+.custom-h1 {
+    font-family: Helvetica Neue Light, Helvetica Neue, Helvetica, san-serif;
+    font-weight: 100;
+    font-size: 64px;
+}
+
+.custom-h2 {
+    font-family: Helvetica Neue Light, Helvetica Neue, Helvetica, san-serif;
+    font-weight: 200;
+    font-size: 36px;
+}
+
+.custom-h3 {
+    font-family: Helvetica Neue Light, Helvetica Neue, Helvetica, san-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.custom-h4{
+    font-family: Helvetica Neue Light, Helvetica Neue, Helvetica, san-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.custom-h5{
+    font-family: Helvetica Neue Light, Helvetica Neue, Helvetica, san-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.radical-score {
+	font-family: Helvetica Neue Light, Helvetica Neue, Helvetica, san-serif;
+    font-weight: 500;
+}
+
 
 /* Required for jQuery Masonry */
 
@@ -104,4 +144,18 @@ filter: alpha(opacity = 75);
 transition:opacity 0.25s;
 -moz-transition:opacity 0.25s;
 -webkit-transition:opacity 0.25s;
+}
+
+/* Circle effect for radical score */
+
+.circle {
+	width:100px;
+	height:100px;
+	border-radius:50px;
+	font-size:60px;
+	color:#fff;
+	line-height:100px;
+	text-align:center;
+	background:#ED1C24;
+	margin: 2%;
 }

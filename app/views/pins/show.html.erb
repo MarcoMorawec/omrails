@@ -1,18 +1,40 @@
 <div class="row">
-	<div class="span8 offset2">
+	<div class="span11 offset1">
 		<div class="frosty">
-				<div class="image-description">
-			  		<h1><%= @pin.description %></h1>
-			  	</div>
-			  		<%= image_tag @pin.image %>	
-			</p>
-			<p>
-			  <%= @pin.user.name %>
-			</p>
-			<% if current_user == @pin.user %>
-				<%= link_to 'Edit', edit_pin_path(@pin) %> |
-			<% end %>
-			<%= link_to 'Back', pins_path %>
+			<div class="span5">
+				<div class= "row">
+					<div class="span1">
+						<div class="circle">
+							<p class="radical-score">9.8</p>
+						</div>
+					</div>
+						<div class="span3">
+							<h1 class="custom-h1"><%= @pin.user.name %></h1>
+						</div>
+					</div>
+				</div>
+			<div class="row">
+				<div class="span7">
+				  	<%= image_tag @pin.image %>
+					</p>
+					<p>
+				  	<%= @pin.user.name %>
+					</p>
+					<% if current_user == @pin.user %>
+						<%= link_to 'Edit', edit_pin_path(@pin) %> |
+					<% end %>
+					<%= link_to 'Back', pins_path %>
+				</div>
+				<div class="span4">
+					<div class="image-description">
+			  			<h1><%= @pin.description %></h1>
+					</div>
+					<h2>Session Score</h2>
+					<h2>Conditions</h2>
+					<h2>Date</h2>
+
+				</div>
+			</div>
 		</div>	
 	</div>	
 </div>
