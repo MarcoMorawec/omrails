@@ -30,10 +30,12 @@
 			  			<h1 class="custom-h1"><%= @pin.description %></h1>
 					</div>
 					<h2 class="custom-h2">Session Score</h2>
-					<h2 class="custom-h2">Conditions</h2>
-					<h2 class="custom-h2">Date</h2>
+					<h2 class="custom-h2">How big was it?</h2>
+						<h3 class="custom-h3">The waves were <%= @pin.SizeOfWaves %> Feet</h3>
+					<h2 class="custom-h2">How many waves?</h2>
+						<h3 class="custom-h3">I got <%= @pin.NumberOfWaves %> waves!</h3>
 					<h2 class="custom-h2">Location</h2>
-						<%= @pin.location %>
+						<h3 class="custom-h3"><%= @pin.location %></h3>
 
 				</div>
 			</div>
