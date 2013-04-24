@@ -4,7 +4,7 @@
 			<div class="span11">
 				<div class= "row">
 					<div class="span1">
-						<div class="circle">
+						<div class="circle-overall">
 							<p class="radical-score">9.8</p>
 						</div>
 					</div>
@@ -34,7 +34,16 @@
 					<%= link_to 'Back', pins_path %>
 				</div>
 				<div class="span4">
-					<h2 class="custom-h2">Session Score</h2>
+					<div class="row">
+						<div class="span1">
+							<div class="circle-sessions">
+								<p class="radical-score">9.8</p>
+							</div>
+						</div>
+						<div class="span3">
+							<h2 class="custom-h2">Session Score</h2>
+						</div>
+					</div>
 					<h2 class="custom-h2">How big was it?</h2>
 						<h3 class="custom-h3">The waves were <%= @pin.SizeOfWaves %> Feet</h3>
 					<h2 class="custom-h2">Surf Conditions?</h2>
