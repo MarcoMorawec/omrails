@@ -1,17 +1,25 @@
 <div class="row">
 	<div class="span11 offset1">
 		<div class="frosty">
-			<div class="span5">
+			<div class="span11">
 				<div class= "row">
 					<div class="span1">
 						<div class="circle">
 							<p class="radical-score">9.8</p>
 						</div>
 					</div>
-						<div class="span3">
+						<div class="span4">
 							<h1 class="custom-h1"><%= @pin.user.name %></h1>
 						</div>
+					<div class="span6 image-description">
+			  			<h1 class="custom-h1">Session Stats</h1>
+					</div>
 				</div>
+			</div>
+			<div class="span11">
+				<ul class="nav nav-list">
+					<li class="divider"></li>
+				</ul>
 			</div>
 			<div class="row">
 				<div class="span7">
@@ -26,9 +34,6 @@
 					<%= link_to 'Back', pins_path %>
 				</div>
 				<div class="span4">
-					<div class="image-description">
-			  			<h1 class="custom-h1">Session Stats</h1>
-					</div>
 					<h2 class="custom-h2">Session Score</h2>
 					<h2 class="custom-h2">How big was it?</h2>
 						<h3 class="custom-h3">The waves were <%= @pin.SizeOfWaves %> Feet</h3>
