@@ -1,10 +1,11 @@
 class Pin < ActiveRecord::Base
-  attr_accessible :description, :location, :SizeOfWaves, :NumberOfWaves, 
+  attr_accessible :description, :location, :SurfConditions, :SizeOfWaves, :NumberOfWaves, 
                   :date, :SessionSurfScore, :OverallSurfScore, 
                   :image, :image_remote_url
 
   validates :description, presence: true, :length => { :minimum => 5 }
   validates :location, presence: true, :length => { :minimum => 2 }
+  validates :SurfConditions, presence: true, :length => { :minimum => 5}
   validates :SizeOfWaves, presence: true
   validates :NumberOfWaves, presence: true
   validates :user_id, presence: true

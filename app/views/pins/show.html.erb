@@ -11,14 +11,14 @@
 						<div class="span3">
 							<h1 class="custom-h1"><%= @pin.user.name %></h1>
 						</div>
-					</div>
 				</div>
+			</div>
 			<div class="row">
 				<div class="span7">
 				  	<%= image_tag @pin.image %>
 					</p>
 					<p>
-				  	<%= @pin.user.name %>
+				  	<h3 class="custom-h3"><%= @pin.description %> by <%= @pin.user.name %> - <%= @pin.location %></h3>
 					</p>
 					<% if current_user == @pin.user %>
 						<%= link_to 'Edit', edit_pin_path(@pin) %> |
@@ -27,16 +27,15 @@
 				</div>
 				<div class="span4">
 					<div class="image-description">
-			  			<h1 class="custom-h1"><%= @pin.description %></h1>
+			  			<h1 class="custom-h1">Session Stats</h1>
 					</div>
 					<h2 class="custom-h2">Session Score</h2>
 					<h2 class="custom-h2">How big was it?</h2>
 						<h3 class="custom-h3">The waves were <%= @pin.SizeOfWaves %> Feet</h3>
+					<h2 class="custom-h2">Surf Conditions?</h2>
+						<h3 class="custom-h3"><%= @pin.SurfConditions %></h3>
 					<h2 class="custom-h2">How many waves?</h2>
 						<h3 class="custom-h3">I got <%= @pin.NumberOfWaves %> waves!</h3>
-					<h2 class="custom-h2">Location</h2>
-						<h3 class="custom-h3"><%= @pin.location %></h3>
-
 				</div>
 			</div>
 		</div>	
