@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require jquery.masonry.min.js
 //= require jquery.backstretch.min.js
+//= require bootstrap-slider.js
 //= require bootstrap
 //= require_tree .

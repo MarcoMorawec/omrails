@@ -3,8 +3,8 @@
   <%= f.full_error :image_file_size, class: "alert alert-error" %>
   <%= f.full_error :image_content_type, class: "alert alert-error" %>
 
-  	<%= f.input :image, label: "Upload and image" %>
-  	<%= f.input :image_remote_url, label: "Paste image URL" %>
+  	<%= f.input :image, label: "Upload a Session Image" %>
+  	<%= f.input :image_remote_url, label: "Paste the Image URL" %>
     <%= f.input :location, as: :text, input_html: { rows: "1"}, label: "Location"  %>
     <%= f.input :SurfConditions, as: :text, input_html: { rows: "1"}, label: "How were the conditions?" %>
 
@@ -17,5 +17,9 @@
     <%= f.button :submit, class: "btn btn-large btn-danger", value: "Create the Session" %> |
     <%= link_to 'Show', @pin %> |
 	<%= link_to 'Back', pins_path %>
+
+
+  <input $('.slider').slider(type="text" class="span2" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="vertical" data-slider-selection="after"data-slider-tooltip="hide")>
+
   </div>
 <% end %>
