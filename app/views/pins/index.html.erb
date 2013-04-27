@@ -1,9 +1,11 @@
 <%= render 'pages/home' %>
 
-<div id="pins" >
-  <%= render @pins %>
-</div>
-  <!-- show the pagination -->
-  <div class="">
-  <%= will_paginate @pins %>
-</div>
+<% if user_signed_in? %>
+	<div id="pins" >
+	  <%= render @pins %>
+	</div>
+	  <!-- show the pagination -->
+	  <div class="">
+	  <%= will_paginate @pins %>
+	</div>
+<% end %>
