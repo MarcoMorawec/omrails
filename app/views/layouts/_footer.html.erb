@@ -1,10 +1,21 @@
-<script>
-	$.backstretch([
-	"<%= asset_path 'bck1.jpg' %>",
-	"<%= asset_path 'bck2.png' %>",
-	"<%= asset_path 'bck3.jpg' %>",
-	], {duration: 4000, fade: 750});
-    
+
+<% if current_page?('/') && !user_signed_in? %>
+	<script>
+		$.backstretch([
+		"<%= asset_path 'bck1.jpg' %>",
+		"<%= asset_path 'bck2.png' %>",
+		"<%= asset_path 'bck3.jpg' %>",
+		], {duration: 4000, fade: 750});
+	</script>
+<% else %>
+	<script>
+		$.backstretch("<%= asset_path 'homebackground.jpg' %>")
+	</script>
+<% end %>
+
+
+
+<script>   
 	$('.slider').slider() 
 </script>
 
