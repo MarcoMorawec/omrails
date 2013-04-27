@@ -1,7 +1,11 @@
 <script>
-	$.backstretch("<%= asset_path 'homebackground.jpg' %>");
+	$.backstretch([
+	"<%= asset_path 'bck1.jpg' %>",
+	"<%= asset_path 'bck2.png' %>",
+	"<%= asset_path 'bck3.jpg' %>",
+	], {duration: 4000, fade: 750});
     
-    $('.slider').slider() 
+	$('.slider').slider() 
 </script>
 
 <div class="container">
