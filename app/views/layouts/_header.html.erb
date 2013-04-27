@@ -10,7 +10,9 @@
 		    </a>
 		     
 		    <!-- Be sure to leave the brand out there if you want it shown -->
-		    <img src="<%= asset_path 'logonav_small.png' %>" class="pull-left img-logo"><%= link_to "SurfScore", root_path, class: "brand" %>
+		    
+		    <%= link_to image_tag('logonav_small.png'), root_path, class: "pull-left img-logo"  %>
+		    <%= link_to "SurfScore", root_path, class: "brand" %>
 
 		    <!-- Everything you want hidden at 940px or less, place within here -->
 		    <div class="nav-collapse collapse">
