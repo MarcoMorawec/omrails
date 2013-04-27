@@ -14,12 +14,14 @@
     <%= f.input :description, as: :text, input_html: { rows: "3" }, label: "Session Tag" %>
 
   <div class="pull-right">
-    <%= f.button :submit, class: "btn btn-large btn-danger", value: "Create the Session" %> |
+    <%= f.button :submit, class: "btn btn-large btn-danger", value: "Make the Session" %> |
     <%= link_to 'Show', @pin %> |
 	<%= link_to 'Back', pins_path %>
 
-
-  <input $('.slider').slider(type="text" class="span2" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="vertical" data-slider-selection="after"data-slider-tooltip="hide")>
+<!-- Trying to get the Javascript for the slider to work -->
+<script type="text/javascript">
+  $('.slider').slider(options)
+</script>
 
   </div>
 <% end %>
