@@ -1,5 +1,16 @@
 <%= render 'pages/home' %>
 
+<!-- adding the calendar view -->
+<% if user_signed_in? %>
+
+
+
+
+<% end %>
+
+
+<!-- End of Calendar View -->
+
 <% if user_signed_in? %>
 	<div id="pins" >
 	  <%= render @pins %>

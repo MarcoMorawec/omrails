@@ -9,6 +9,7 @@ gem 'aws-sdk'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
+gem "watu_table_builder", :require => "table_builder"
 
 
 group :production do
