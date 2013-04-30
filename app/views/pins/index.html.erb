@@ -1,13 +1,20 @@
 <%= render 'pages/home' %>
 
 <!-- adding the calendar view -->
+
 <% if user_signed_in? %>
-
-
-
-
+	<div id="calendar">
+		<%= calendar_for(@tasks) do |t| %>
+		  <%= t.head('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') %>
+		  <%= t.day do |day, tasks, pin| %>
+		    <%= day.day %>
+		    <% tasks.each do |task| %>
+		      <%= h(task.name) %>
+		    <% end %>
+		  <% end %>
+		<% end %>
+	</div>
 <% end %>
-
 
 <!-- End of Calendar View -->
 
