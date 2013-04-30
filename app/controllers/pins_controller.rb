@@ -6,6 +6,8 @@ before_filter :authenticate_user!, except: [:index]
   def index
     @pins = Pin.order("created_at desc").page(params[:page]).per_page(20)
 
+    @date = params[:month] ? Date.parse(params[:month]) : Date.today
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @pins }

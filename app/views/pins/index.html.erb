@@ -3,15 +3,25 @@
 <!-- adding the calendar view -->
 
 <% if user_signed_in? %>
+  	<h2 id="month">
+	    <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") %>
+	    <%=h @date.strftime("%B %Y") %>
+	    <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") %>
+	  	</h2>
 	<div id="calendar">
 		<%= calendar_for(@tasks) do |t| %>
-		  <%= t.head('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') %>
-		  <%= t.day do |day, tasks, pin| %>
-		    <%= day.day %>
-		    <% tasks.each do |task| %>
-		      <%= h(task.name) %>
+			<%= t.head('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') %>
+			<%= t.day do |day, tasks, pins| %>
+		    	<%= day.day %>
+			    <% tasks.each do |task| %>
+			      <%= h(task.name) %>
 		    <% end %>
-		  <% end %>
+		      	<ul>
+			        <% for pin in @pins %>
+			          <li><%= link_to h(pin.description), pin %></li>
+			        <% end %>
+			    </ul>		  
+			<% end %>
 		<% end %>
 	</div>
 <% end %>
