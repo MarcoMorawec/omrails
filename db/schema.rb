@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130424002408) do
+ActiveRecord::Schema.define(:version => 20130501001034) do
 
   create_table "pins", :force => true do |t|
     t.string   "description"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20130424002408) do
     t.decimal  "SessionSurfScore"
     t.decimal  "OverallSurfScore"
     t.string   "SurfConditions"
+    t.date     "surfdate"
   end
 
   add_index "pins", ["user_id"], :name => "index_pins_on_user_id"
