@@ -17,9 +17,11 @@
 			      <%= h(task.name) %>
 		    <% end %>
 		      	<ul>
-			        <% for pin in @pins %>
-			          <li><%= link_to h(pin.description), pin %></li>
-			        <% end %>
+		      		<% if ActiveRecord::Base.connection.column_exists?(:pins, :surfdate) %>
+				        <% for pin in @pins %>
+				          <li><%= link_to h(pin.description), pin %></li>
+				        <% end %>
+				    <% end %>
 			    </ul>		  
 			<% end %>
 		<% end %>
