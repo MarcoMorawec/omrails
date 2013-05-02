@@ -15,11 +15,13 @@
 		    	<%= day.day %>
 			    <% tasks.each do |task| %>
 			      <%= h(task.name) %>
-		    <% end %>
+		    	<% end %>
 		      	<ul>
-		      		<% if ActiveRecord::Base.connection.column_exists?(:pins, :surfdate) %>
-				        <% for pin in @pins %>
-				          <li><%= link_to h(pin.description), pin %></li>
+				    <% for pin in @pins %>
+						<% if pin.surfdate == day %>				        
+							<li>
+								<%= link_to h(pin.description), pin %>
+							</li>
 				        <% end %>
 				    <% end %>
 			    </ul>		  
