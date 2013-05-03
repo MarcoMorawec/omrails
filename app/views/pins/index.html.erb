@@ -13,8 +13,13 @@
 			<%= t.head('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') %>
 			<%= t.day do |day, tasks, pins| %>
 		    	<%= day.day %>
+					<%= link_to  do %>
+					<!-- add on hover class here -->
+					  <i class="icon-edit icon-2x pull-right"></i>
+					<% end %>
 					<%= link_to new_pin_path do %>
-					  <i class="icon-plus-sign icon-large pull-right"></i>
+					<!-- add on hover class here -->
+					  <i class="icon-plus-sign icon-2x pull-right"></i>
 					<% end %>
 			    <% tasks.each do |task| %>
 			      <%= h(task.name) %>
@@ -23,7 +28,7 @@
 				    <% for pin in @pins %>
 						<% if pin.surfdate == day %>				        
 							<li>
-								<%= image_tag 'logonav_small.png' %>
+								<%= link_to @pin %>
 							</li>
 				        <% end %>
 				    <% end %>
