@@ -28,7 +28,7 @@
 				    <% for pin in @pins %>
 						<% if pin.surfdate == day %>				        
 							<li>
-								<%= image_tag 'logonav_small.png' %>
+								<%= link_to image_tag(pin.image(:medium)), pin %>
 							</li>
 				        <% end %>
 				    <% end %>
