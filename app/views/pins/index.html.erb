@@ -26,7 +26,10 @@
 		    	<% end %>
 		      	<ul>
 				    <% for pin in @pins %>
-						<% if pin.surfdate == day %>				        
+						<% if pin.surfdate == day %>
+						<h4 class="custom-h4">
+							<%= pin.NumberOfWaves %> Waves || <%= pin.SurfConditions %>
+						</h4> 
 							<li>
 								<div class="box-calendar">
 									<div class="img-wrap">
