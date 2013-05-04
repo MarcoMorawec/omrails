@@ -28,7 +28,14 @@
 				    <% for pin in @pins %>
 						<% if pin.surfdate == day %>				        
 							<li>
-								<%= link_to image_tag(pin.image(:thumb)), pin %>
+								<div class="box-calendar">
+									<div class="img-wrap">
+										<%= link_to image_tag(pin.image(:thumb)), pin %>
+										<div class="img-overlay image-description">
+											<%= pin.description %>
+										</div>
+									</div>
+								</div>
 							</li>
 				        <% end %>
 				    <% end %>
