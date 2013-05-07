@@ -1,13 +1,16 @@
 <div class="box">
-	<p>
+	
 		<div class="img-wrap">
 			<%= link_to image_tag(pin.image(:medium)), pin_path(pin) %>
 			<div class="img-overlay image-description">
 				<%= pin.description %>
 			</div>
 		</div>
-	</p>
-	
+	<% if (pin.NumberOfWaves && pin.SurfConditions) %>
+		<h4 class="custom-h4">
+			<%= pin.NumberOfWaves %> Waves || <%= pin.SurfConditions %>
+		</h4>
+	<% end %> 	
 	<p>
 		Posted by <%= link_to pin.user.name, pin.user %>
 	</p>
