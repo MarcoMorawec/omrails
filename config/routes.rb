@@ -7,6 +7,7 @@ Omrails::Application.routes.draw do
   devise_for :users
   match 'users/:id' => 'users#show', as: :user
 
+  get 'sessions' => 'pins#sessions'
 
  get 'about' => 'pages#about'
 
