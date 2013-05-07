@@ -4,15 +4,59 @@
 	<h1 class="custom-h1">Current Sessions</h1>
 </div>
 
-<!-- Show the pins -->
+<%= render 'pages/dashboard' %>
+
+<!-- End of Dashboard -->
+
+
+<!-- adding the calendar view -->
 
 <% if user_signed_in? %>
-	<div id="pins" >
-	</div>
-	  <!-- show the pagination -->
-	<div class="">
+<div class="container">
+  	<h2 id="month">
+	    <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") %>
+	    <%=h @date.strftime("%B %Y") %>
+	    <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") %>
+	</h2>
+	<div id="calendar">
+		<%= calendar_for(@tasks) do |t| %>
+			<%= t.head('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') %>
+			<%= t.day do |day, tasks, pins| %>
+		    	<%= day.day %>
+					<%= link_to  do %>
+					<!-- add on hover class here -->
+					  <i class="icon-edi icon-2 pull-right"></i>
+					<% end %>
+					<%= link_to new_pin_path do %>
+					<!-- add on hover class here -->
+					  <i class="icon-plus-sig icon-2 pull-right"></i>
+					<% end %>
+			    <% tasks.each do |task| %>
+			      <%= h(task.name) %>
+		    	<% end %>
+		      	<ul>
+				    <% for pin in @pins %>
+						<% if pin.surfdate == day %>
+						<h4 class="custom-h4">
+							<%= pin.NumberOfWaves %> Waves || <%= pin.SurfConditions %>
+						</h4> 
+							<li>
+								<div class="box-calendar">
+									<div class="img-wrap">
+										<%= link_to image_tag(pin.image(:thumb)), pin %>
+										<div class="img-overlay image-description">
+											<%= pin.description %>
+										</div>
+									</div>
+								</div>
+							</li>
+				        <% end %>
+				    <% end %>
+			    </ul>		  
+			<% end %>
+		<% end %>
 	</div>
 <% end %>
-<!-- End of pins -->
+<!-- End of Calendar View -->
 
 
