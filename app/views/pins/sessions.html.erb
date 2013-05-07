@@ -8,11 +8,9 @@
 
 <% if user_signed_in? %>
 	<div id="pins" >
-	  <%= render @pins %>
 	</div>
 	  <!-- show the pagination -->
 	<div class="">
-	  <%= will_paginate @pins %>
 	</div>
 <% end %>
 <!-- End of pins -->
