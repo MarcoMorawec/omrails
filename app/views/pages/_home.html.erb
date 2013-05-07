@@ -1,12 +1,5 @@
 <div class="container">
-	<% if user_signed_in? %>
-		<div class="span12">
-			<div class="hero-unit frosty">
-					<h1 class="custom-h1">Lifetime Surf Sessions</h1>
-					<h2 class="custom-h2"> Here goes the dashboard </h2>
-			</div>
-		</div>
-	<% else %>
+	<% if !user_signed_in? %>
 		<div class="span5">		
 			<%= render 'devise/registrations/new' %>
 		</div>

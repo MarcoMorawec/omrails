@@ -1,8 +1,16 @@
 <%= render 'pages/home' %>
 
+<!-- Adding the Dashboard -->
+
+<%= render 'pages/dashboard' %>
+
+<!-- End of Dashboard -->
+
+
 <!-- adding the calendar view -->
 
 <% if user_signed_in? %>
+<div class="container">
   	<h2 id="month">
 	    <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") %>
 	    <%=h @date.strftime("%B %Y") %>
@@ -15,11 +23,11 @@
 		    	<%= day.day %>
 					<%= link_to  do %>
 					<!-- add on hover class here -->
-					  <i class="icon-edit icon-2 pull-right"></i>
+					  <i class="icon-edi icon-2 pull-right"></i>
 					<% end %>
 					<%= link_to new_pin_path do %>
 					<!-- add on hover class here -->
-					  <i class="icon-plus-sign icon-2 pull-right"></i>
+					  <i class="icon-plus-sig icon-2 pull-right"></i>
 					<% end %>
 			    <% tasks.each do |task| %>
 			      <%= h(task.name) %>
@@ -47,15 +55,19 @@
 		<% end %>
 	</div>
 <% end %>
-
 <!-- End of Calendar View -->
+
+<!-- Show the pins -->
 
 <% if user_signed_in? %>
 	<div id="pins" >
 	  <%= render @pins %>
 	</div>
 	  <!-- show the pagination -->
-	  <div class="">
+	<div class="">
 	  <%= will_paginate @pins %>
 	</div>
 <% end %>
+<!-- End of pins -->
+
+
