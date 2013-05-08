@@ -14,6 +14,18 @@ class Pin < ActiveRecord::Base
   								content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'] },
   								size: { less_than: 5.megabytes }
 
+# CREATING A SUM FOR NUMBEROFWAVES
+  
+
+
+# values = NumberOfWaves.sum(:value, :group => :Total_NumberOfWaves)
+
+# values.each do |Total_NumberOfWaves, value|
+#   aggregate_NumberOfWaves = NumberOfWaves.new(:Total_NumberOfWaves => Total_NumberOfWaves, :value => value, :resource_id => 3)
+#   @aggregates_NumberOfWaves.push(aggregate_NumberOfWaves)
+# end
+
+
 
 
   belongs_to :user

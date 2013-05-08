@@ -2,14 +2,16 @@
 	<div class="container">
 		<div class="hero-unit frosty">
 			<h1 class="custom-h1">
-				 Marco Morawec
+					 Marco Morawec
 			</h1>
 				<h1 class="custom-h1">Lifetime Surfing Sessions</h1>
 					<div class="row">
 							<div class="span4">
 									<h2 class="custom-h2">Total Waves</h2>
 									<h3  class="dashboard-score">
-										<%=  %>
+										<% if User.name == user_signed_in? %>
+											<%= Pin.sum(:NumberOfWaves) %>
+										<% end%>
 									</h3>
 							</div>
 							<div class="span4">
