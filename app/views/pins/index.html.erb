@@ -1,11 +1,12 @@
 <%= render 'pages/home' %>
 
-<div class="hero-unit frosty">
-	<h1 class="custom-h1">Top Surf Sessions</h1>
-</div>
+<% if user_signed_in? %>
+	<div class="hero-unit frosty">
+		<h1 class="custom-h1">Top Surf Sessions</h1>
+	</div>
 <!-- Show the pins -->
 
-<% if user_signed_in? %>
+
 	<div id="pins" >
 	  <%= render @pins %>
 	</div>

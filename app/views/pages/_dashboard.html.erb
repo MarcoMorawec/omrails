@@ -9,9 +9,8 @@
 							<div class="span4">
 									<h2 class="custom-h2">Total Waves</h2>
 									<h3  class="dashboard-score">
-										<% if User.name == user_signed_in? %>
-											<%= Pin.sum(:NumberOfWaves) %>
-										<% end%>
+									<!-- Need to sum for each user seperately -->
+										<%= Pin.sum(:NumberOfWaves) %>							
 									</h3>
 							</div>
 							<div class="span4">
