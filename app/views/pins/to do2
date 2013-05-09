@@ -1,0 +1,24 @@
+> why are pins that are shown in session calendar not shown on home?
+
+> why is the calculation for average waves per session so high
+
+> Make the calculation of waves only for the current user - NumberOfWaves is currently summed up for all users, and not only the single users who wants to look at his dashboard
+
+> adjust the form input:
+
+image
+conditions:integer (1-5)
+number of waves
+number of set waves
+date
+Location
+Two words description
+
+> adjust the dashboard, so it matches the input
+
+> create the columns in the database -> done!
+
+> fill in some data
+
+> adjust the dashboard calculations
+

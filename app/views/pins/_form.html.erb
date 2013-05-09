@@ -3,24 +3,25 @@
   <%= f.full_error :image_file_size, class: "alert alert-error" %>
   <%= f.full_error :image_content_type, class: "alert alert-error" %>
 
-  	<%= f.input :image, label: "Upload a Session Image" %>
-  	<%= f.input :image_remote_url, label: "Paste the Image URL" %>
-    <%= f.input :location, as: :text, input_html: { rows: "1"}, label: "Location"  %>
-    <%= f.input :SurfConditions, as: :text, input_html: { rows: "1"}, label: "How were the conditions?" %>
+    <%= f.input :image, label: "Upload a Session Image" %>
+    <%= f.input :image_remote_url, label: "Paste the Image URL" %>
+
+    <%= f.input :SurfConditionRating, label: "Rate your Session (1=bad, 5=epic)?" %>
+
+    <%= f.input :NumberOfWaves, label: "How many waves did you catch?" %>
+    <%= f.input :NumberOfSetWaves, label: "How many Set-Waves?" %>
 
 
     <%= f.input :surfdate, label: "When did you surf?"  %>
 
+    <%= f.input :location, label: "Where did you surf"  %>
 
-    <%= f.input :SizeOfWaves, label: "How Big was it?" %>
-    <%= f.input :NumberOfWaves, label: "How many waves did you catch?" %>
-
-    <%= f.input :description, as: :text, input_html: { rows: "3" }, label: "Session Tag" %>
+    <%= f.input :description, label: "Two Word Sum Up" %>
 
   <div class="pull-right">
     <%= f.button :submit, class: "btn btn-large btn-danger", value: "Make the Session" %> |
     <%= link_to 'Show', @pin %> |
-	<%= link_to 'Back', pins_path %>
+  <%= link_to 'Back', pins_path %>
 
 <!-- Trying to get the Javascript for the slider to work -->
 <script type="text/javascript">

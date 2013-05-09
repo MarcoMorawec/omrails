@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130501001034) do
+ActiveRecord::Schema.define(:version => 20130508234730) do
 
   create_table "pins", :force => true do |t|
     t.string   "description"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
     t.integer  "user_id"
     t.string   "image_file_name"
     t.string   "image_content_type"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20130501001034) do
     t.decimal  "OverallSurfScore"
     t.string   "SurfConditions"
     t.date     "surfdate"
+    t.integer  "SurfConditionRating"
   end
 
   add_index "pins", ["user_id"], :name => "index_pins_on_user_id"
