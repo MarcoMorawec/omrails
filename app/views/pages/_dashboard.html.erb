@@ -2,7 +2,9 @@
 	<div class="container">
 		<div class="hero-unit frosty">
 			<h1 class="custom-h1">
-					 Marco Morawec
+				<% if current_user == @user %>
+					<% @user.name %>
+				<% end %>
 			</h1>
 				<h1 class="custom-h1">Lifetime Surfing Sessions</h1>
 					<div class="row">
