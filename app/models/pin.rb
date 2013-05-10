@@ -1,7 +1,7 @@
 class Pin < ActiveRecord::Base
   attr_accessible :description, :location, :SurfConditions, :SizeOfWaves, :NumberOfWaves, 
                   :date, :SessionSurfScore, :OverallSurfScore, 
-                  :image, :image_remote_url, :surfdate, :SurfConditionRating, 
+                  :image, :image_remote_url, :surfdate, :SurfConditionRating, :sessiontime,
                   :NumberOfSetWaves
 
   validates :description, presence: true, :length => { :minimum => 3 }
@@ -11,6 +11,8 @@ class Pin < ActiveRecord::Base
   validates :NumberOfWaves, presence: true
   validates :surfdate, presence: true
   validates :user_id, presence: true
+
+  validates :sessiontime, presence: true
 
   validates :SurfConditionRating, presence: true
   validates :NumberOfSetWaves, presence: true

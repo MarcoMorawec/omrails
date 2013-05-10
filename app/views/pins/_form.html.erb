@@ -14,14 +14,15 @@
 
     <%= f.input :surfdate, label: "When did you surf?"  %>
 
+
     <%= f.input :location, label: "Where did you surf"  %>
 
-    <%= f.input :description, label: "Two Word Sum Up" %>
+    <%= f.input :description, label: "Two Word Session Sum Up" %>
 
   <div class="pull-right">
     <%= f.button :submit, class: "btn btn-large btn-danger", value: "Make the Session" %> |
     <%= link_to 'Show', @pin %> |
-  <%= link_to 'Back', pins_path %>
+    <%= link_to 'Back', pins_path %>
 
 <!-- Trying to get the Javascript for the slider to work -->
 <script type="text/javascript">
