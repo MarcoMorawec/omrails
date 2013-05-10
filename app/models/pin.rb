@@ -12,7 +12,7 @@ class Pin < ActiveRecord::Base
   validates :surfdate, presence: true
   validates :user_id, presence: true
 
-  validates :sessiontime, presence: true
+  #validates :sessiontime, presence: true
 
   validates :SurfConditionRating, presence: true
   validates :NumberOfSetWaves, presence: true
